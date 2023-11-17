@@ -8,7 +8,15 @@ import Card from 'react-bootstrap/Card';
 import { IoTimeOutline } from 'react-icons/io5';
 import { TiArrowLeftThick } from 'react-icons/ti';
 
-function ArticleItem({ title, desc, image, readingTime, category, writter, id }) {
+function ArticleItem({
+  title,
+  desc,
+  image,
+  readingTime,
+  category,
+  writter,
+  id,
+}) {
   return (
     <>
       <Card>
