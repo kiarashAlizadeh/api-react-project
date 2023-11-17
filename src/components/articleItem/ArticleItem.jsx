@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './ArticleItem.css';
 
 // bootstrap
@@ -7,7 +8,7 @@ import Card from 'react-bootstrap/Card';
 import { IoTimeOutline } from 'react-icons/io5';
 import { TiArrowLeftThick } from 'react-icons/ti';
 
-function ArticleItem({ title, desc, image, readingTime, category, writter }) {
+function ArticleItem({ title, desc, image, readingTime, category, writter, id }) {
   return (
     <>
       <Card>
@@ -15,11 +16,14 @@ function ArticleItem({ title, desc, image, readingTime, category, writter }) {
         <Card.Body>
           <Card.Title className="py-2">{title}</Card.Title>
           <Card.Text>{desc}</Card.Text>
-          <span className="flex items-center hover:cursor-pointer hover:text-pink-400">
+          <Link
+            to={`/article/${id}`}
+            className="flex items-center hover:cursor-pointer hover:text-pink-400"
+          >
             ادامه مقاله
             {'\u00A0'}
             <TiArrowLeftThick size="25px" />
-          </span>
+          </Link>
         </Card.Body>
         <Card.Footer className="flex justify-between py-3">
           <span> نویسنده : {writter}</span>

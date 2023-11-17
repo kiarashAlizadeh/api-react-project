@@ -9,7 +9,7 @@ function Home() {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     axios
-      .get('http://localhost:5000/articles')
+      .get('https://fake-api-react-blog.vercel.app/articles')
       .then((response) => setArticles(response.data));
   }, []);
   return (
